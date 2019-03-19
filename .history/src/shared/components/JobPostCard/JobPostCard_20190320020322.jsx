@@ -134,10 +134,8 @@ const JobPostCard = ({
 
 JobPostCard.propTypes = {
   jobTitle: PropTypes.string.isRequired,
-  jobSalaryRangeFrom: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-    .isRequired,
-  jobSalaryRangeTo: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-    .isRequired,
+  jobSalaryRangeFrom: PropTypes.string.isRequired,
+  jobSalaryRangeTo: PropTypes.string.isRequired,
   jobLocation: PropTypes.string.isRequired,
   jobMinExp: PropTypes.string.isRequired,
   jobMinEducation: PropTypes.string.isRequired,

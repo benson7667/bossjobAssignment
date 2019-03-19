@@ -21,18 +21,14 @@ export default function(state = initialState, action) {
       return {
         ...state,
         isLoading: false,
-        data: action.payload.data.jobs,
-        page: action.payload.data.page,
-        total_pages: action.payload.data.total_pages
+        data: action.payload.data.jobs
       };
 
     case LOADED_MORE_JOB_LISTINGS:
       return {
         ...state,
         isLoading: false,
-        data: state.data.concat(action.payload.data.jobs),
-        page: action.payload.data.page,
-        total_pages: action.payload.data.total_pages
+        data: state.data.concat(action.payload.data.jobs)
       };
 
     default:

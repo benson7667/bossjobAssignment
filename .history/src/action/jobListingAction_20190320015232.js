@@ -32,9 +32,7 @@ export const loadMoreJobListings = pageNumber => async dispatch => {
   dispatch(setLoading());
   try {
     const res = await axios.get(
-      `${
-        Config.apis_domain
-      }search/job_filter?page=${pageNumber}&size=12&query=system`
+      `${Config.apis_domain}search/job_filter?size=${pageNumber}&query=system`
     );
 
     if (res.data.status_code === 200) {

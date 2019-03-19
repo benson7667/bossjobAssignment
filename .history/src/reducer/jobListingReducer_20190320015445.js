@@ -30,9 +30,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         isLoading: false,
-        data: state.data.concat(action.payload.data.jobs),
-        page: action.payload.data.page,
-        total_pages: action.payload.data.total_pages
+        data: state.data.concat(action.payload.data.jobs)
       };
 
     default:

@@ -138,6 +138,7 @@ JobPostCard.propTypes = {
     .isRequired,
   jobSalaryRangeTo: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     .isRequired,
+
   jobLocation: PropTypes.string.isRequired,
   jobMinExp: PropTypes.string.isRequired,
   jobMinEducation: PropTypes.string.isRequired,

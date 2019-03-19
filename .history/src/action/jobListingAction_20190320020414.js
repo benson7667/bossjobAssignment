@@ -29,6 +29,8 @@ export const loadJobListings = () => async dispatch => {
 };
 
 export const loadMoreJobListings = pageNumber => async dispatch => {
+  console.log(pageNumber);
+
   dispatch(setLoading());
   try {
     const res = await axios.get(

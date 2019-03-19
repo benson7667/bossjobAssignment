@@ -4,10 +4,7 @@ import { connect } from "react-redux";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Header from "./shared/components/Header";
 import JobPostCard from "./shared/components/JobPostCard";
-import {
-  loadJobListings,
-  loadMoreJobListings
-} from "./action/jobListingAction";
+import { loadJobListings } from "./action/jobListingAction";
 import { JobListingLoader } from "./shared/components/loader";
 
 class App extends Component {
@@ -15,9 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       isLoading: false,
-      jobListings: null,
-      page: 1,
-      total_pages: 1
+      jobListings: null
     };
   }
 
@@ -25,9 +20,7 @@ class App extends Component {
   static getDerivedStateFromProps(props, state) {
     if (props.jobListings.data !== state.jobListings) {
       return {
-        jobListings: props.jobListings.data,
-        page: props.jobListings.page,
-        total_pages: props.jobListings.total_pages
+        jobListings: props.jobListings.data
       };
     } else return null;
   }
@@ -36,12 +29,10 @@ class App extends Component {
     this.props._loadJobListings();
   }
 
-  fetchMoreData = () => {
-    this.props._loadMoreJobListings(this.state.page + 1);
-  };
+  fetchMoreData = () => {};
 
   render() {
-    const { isLoading, jobListings, page, total_pages } = this.state;
+    const { isLoading, jobListings } = this.state;
 
     return (
       <div className="App">
@@ -54,8 +45,8 @@ class App extends Component {
               <InfiniteScroll
                 dataLength={jobListings.length}
                 next={this.fetchMoreData}
-                hasMore={page < total_pages}
-                scrollThreshold={1.0}
+                // hasMore={page < total_pages}
+                hasMore={false}
                 loader={<JobListingLoader />}
               >
                 {jobListings.map(jobPost => (
@@ -87,8 +78,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  _loadJobListings: loadJobListings,
-  _loadMoreJobListings: loadMoreJobListings
+  _loadJobListings: loadJobListings
 };
 
 export default connect(

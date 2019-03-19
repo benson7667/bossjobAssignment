@@ -55,7 +55,7 @@ class App extends Component {
                 dataLength={jobListings.length}
                 next={this.fetchMoreData}
                 hasMore={page < total_pages}
-                scrollThreshold={1.0}
+                hasMore={false}
                 loader={<JobListingLoader />}
               >
                 {jobListings.map(jobPost => (
