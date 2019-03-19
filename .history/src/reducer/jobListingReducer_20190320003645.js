@@ -2,7 +2,7 @@ import { LOADED_JOB_LISTINGS, LOADING_JOB_LISTINGS } from "../action/types";
 
 const initialState = {
   isLoading: false,
-  data: null
+  data: {}
 };
 
 export default function(state = initialState, action) {

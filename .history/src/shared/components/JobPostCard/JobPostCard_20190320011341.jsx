@@ -72,8 +72,8 @@ const JobPostCard = ({
   jobEmployerTitle,
   postedDate
 }) => {
-  const salaryFrom = moneyConverter(jobSalaryRangeFrom, "ph");
-  const salaryTo = moneyConverter(jobSalaryRangeTo, "ph");
+  const formatted = moneyConverter(jobSalaryRangeFrom, "ph");
+  console.log(formatted);
 
   return (
     <div
@@ -86,7 +86,9 @@ const JobPostCard = ({
       <div className="jobcardWrapper">
         <div style={styles.rowInfo}>
           <span style={styles.jobTitle}>{jobTitle}</span>
-          <span style={styles.jobSalary}>{`${salaryFrom} - ${salaryTo}`}</span>
+          <span
+            style={styles.jobSalary}
+          >{`${jobSalaryRangeFrom} - ${jobSalaryRangeTo}`}</span>
         </div>
 
         <div style={styles.rowInfo}>

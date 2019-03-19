@@ -29,6 +29,7 @@ class App extends Component {
 
   render() {
     const { isLoading, jobListings } = this.state;
+    console.log(this.props.jobListings.data);
 
     return (
       <div className="App">
@@ -41,16 +42,14 @@ class App extends Component {
               {jobListings.map(jobPost => (
                 <JobPostCard
                   key={jobPost.id}
-                  jobTitle={jobPost.job_title}
-                  jobSalaryRangeFrom={jobPost.salary_range_from}
-                  jobSalaryRangeTo={jobPost.salary_range_to}
-                  jobMinExp={jobPost.xp_lvl}
-                  jobLocation={jobPost.job_location}
-                  jobMinEducation={jobPost.degree}
-                  jobType={jobPost.job_type}
-                  jobEmployerImg={jobPost.company_logo}
-                  jobEmployerTitle={jobPost.company_name}
-                  postedDate={jobPost.job_created_at}
+                  jobTitle="Customer Service Representative and aggrgation the rest blah blah blah"
+                  jobSalary="P12-P13"
+                  jobMinExp="1 - 3 years"
+                  jobLocation="Cebu City"
+                  jobMinEducation="Diploma"
+                  jobType="Full Time"
+                  jobEmployerImg="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  jobEmployerTitle="ABC Private Limited"
                 />
               ))}
             </div>

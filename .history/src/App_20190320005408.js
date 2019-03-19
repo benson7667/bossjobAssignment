@@ -29,6 +29,7 @@ class App extends Component {
 
   render() {
     const { isLoading, jobListings } = this.state;
+    console.log(this.props.jobListings.data);
 
     return (
       <div className="App">

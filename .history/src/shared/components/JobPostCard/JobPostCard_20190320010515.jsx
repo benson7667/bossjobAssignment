@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Moment from "react-moment";
+import getSymbolFromCurrency from "currency-symbol-map";
 import { Color } from "../../../constants";
-import { moneyConverter } from "../../../helper/Util";
 
 const styles = {
   rowInfo: {
@@ -72,8 +72,10 @@ const JobPostCard = ({
   jobEmployerTitle,
   postedDate
 }) => {
-  const salaryFrom = moneyConverter(jobSalaryRangeFrom, "ph");
-  const salaryTo = moneyConverter(jobSalaryRangeTo, "ph");
+  const jobSalaryFrom = jobSalaryRangeFrom / 1000;
+  const jobSalaryTo = jobSalaryRangeTo / 1000;
+
+  console.log(getSymbolFromCurrency("PHP"));
 
   return (
     <div
@@ -86,7 +88,9 @@ const JobPostCard = ({
       <div className="jobcardWrapper">
         <div style={styles.rowInfo}>
           <span style={styles.jobTitle}>{jobTitle}</span>
-          <span style={styles.jobSalary}>{`${salaryFrom} - ${salaryTo}`}</span>
+          <span
+            style={styles.jobSalary}
+          >{`${jobSalaryRangeFrom} - ${jobSalaryRangeTo}`}</span>
         </div>
 
         <div style={styles.rowInfo}>

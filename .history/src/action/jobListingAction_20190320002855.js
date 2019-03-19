@@ -10,7 +10,7 @@ export const loadJobListings = () => async dispatch => {
   dispatch(setLoading());
   try {
     const res = await axios.get(
-      `${Config.apis_domain}search/job_filter?size=12&query=system`
+      `${Config.apis_domain}search/job_filter?size=3&query=system`
     );
 
     if (res.data.status_code === 200) {

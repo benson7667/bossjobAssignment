@@ -29,6 +29,7 @@ class App extends Component {
 
   render() {
     const { isLoading, jobListings } = this.state;
+    console.log(this.props.jobListings.data);
 
     return (
       <div className="App">
@@ -42,8 +43,7 @@ class App extends Component {
                 <JobPostCard
                   key={jobPost.id}
                   jobTitle={jobPost.job_title}
-                  jobSalaryRangeFrom={jobPost.salary_range_from}
-                  jobSalaryRangeTo={jobPost.salary_range_to}
+                  jobSalary={jobPost.salary_range_from}
                   jobMinExp={jobPost.xp_lvl}
                   jobLocation={jobPost.job_location}
                   jobMinEducation={jobPost.degree}

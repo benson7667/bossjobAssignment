@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Moment from "react-moment";
 import { Color } from "../../../constants";
-import { moneyConverter } from "../../../helper/Util";
 
 const styles = {
   rowInfo: {
@@ -72,65 +71,64 @@ const JobPostCard = ({
   jobEmployerTitle,
   postedDate
 }) => {
-  const salaryFrom = moneyConverter(jobSalaryRangeFrom, "ph");
-  const salaryTo = moneyConverter(jobSalaryRangeTo, "ph");
+const x 
+return
+  <div
+    style={{
+      padding: "15px",
+      borderBottom: "1px solid",
+      borderColor: Color.tertiaryGray
+    }}
+  >
+    <div className="jobcardWrapper">
+      <div style={styles.rowInfo}>
+        <span style={styles.jobTitle}>{jobTitle}</span>
+        <span
+          style={styles.jobSalary}
+        >{`${jobSalaryRangeFrom} - ${jobSalaryRangeTo}`}</span>
+      </div>
 
-  return (
-    <div
-      style={{
-        padding: "15px",
-        borderBottom: "1px solid",
-        borderColor: Color.tertiaryGray
-      }}
-    >
-      <div className="jobcardWrapper">
-        <div style={styles.rowInfo}>
-          <span style={styles.jobTitle}>{jobTitle}</span>
-          <span style={styles.jobSalary}>{`${salaryFrom} - ${salaryTo}`}</span>
+      <div style={styles.rowInfo}>
+        <span style={styles.miniInfoText}>
+          <i style={styles.icon} className="fa fa-map" />
+          {jobLocation}
+        </span>
+
+        <span style={styles.miniInfoText}>
+          <i style={styles.icon} className="fa fa-briefcase" />
+          {jobMinExp}
+        </span>
+      </div>
+
+      <div style={styles.rowInfo}>
+        <span style={styles.miniInfoText}>
+          <i style={styles.icon} className="fa fa-graduation-cap" />
+          {jobMinEducation}
+        </span>
+
+        <span style={styles.miniInfoText}>
+          <i style={styles.icon} className="fa fa-clock" />
+          {jobType}
+        </span>
+      </div>
+
+      <div style={styles.bottomRow}>
+        <div style={styles.employerImgTitleWrapper}>
+          <img
+            style={styles.employerImgWrapper}
+            src={jobEmployerImg}
+            alt="employer profile"
+          />
+          <p style={styles.employerTitle}>{jobEmployerTitle}</p>
         </div>
 
-        <div style={styles.rowInfo}>
-          <span style={styles.miniInfoText}>
-            <i style={styles.icon} className="fa fa-map" />
-            {jobLocation}
-          </span>
-
-          <span style={styles.miniInfoText}>
-            <i style={styles.icon} className="fa fa-briefcase" />
-            {jobMinExp}
-          </span>
-        </div>
-
-        <div style={styles.rowInfo}>
-          <span style={styles.miniInfoText}>
-            <i style={styles.icon} className="fa fa-graduation-cap" />
-            {jobMinEducation}
-          </span>
-
-          <span style={styles.miniInfoText}>
-            <i style={styles.icon} className="fa fa-clock" />
-            {jobType}
-          </span>
-        </div>
-
-        <div style={styles.bottomRow}>
-          <div style={styles.employerImgTitleWrapper}>
-            <img
-              style={styles.employerImgWrapper}
-              src={jobEmployerImg}
-              alt="employer profile"
-            />
-            <p style={styles.employerTitle}>{jobEmployerTitle}</p>
-          </div>
-
-          <span style={styles.postedAgo}>
-            <Moment fromNow>{postedDate}</Moment>
-          </span>
-        </div>
+        <span style={styles.postedAgo}>
+          <Moment fromNow>{postedDate}</Moment>
+        </span>
       </div>
     </div>
-  );
-};
+  </div>)
+
 
 JobPostCard.propTypes = {
   jobTitle: PropTypes.string.isRequired,

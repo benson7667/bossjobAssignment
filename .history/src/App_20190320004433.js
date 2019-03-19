@@ -29,6 +29,7 @@ class App extends Component {
 
   render() {
     const { isLoading, jobListings } = this.state;
+    console.log(this.props.jobListings.data);
 
     return (
       <div className="App">
@@ -37,23 +38,7 @@ class App extends Component {
           {isLoading || jobListings === null ? (
             <div>Loading</div>
           ) : (
-            <div style={{ padding: "10px" }}>
-              {jobListings.map(jobPost => (
-                <JobPostCard
-                  key={jobPost.id}
-                  jobTitle={jobPost.job_title}
-                  jobSalaryRangeFrom={jobPost.salary_range_from}
-                  jobSalaryRangeTo={jobPost.salary_range_to}
-                  jobMinExp={jobPost.xp_lvl}
-                  jobLocation={jobPost.job_location}
-                  jobMinEducation={jobPost.degree}
-                  jobType={jobPost.job_type}
-                  jobEmployerImg={jobPost.company_logo}
-                  jobEmployerTitle={jobPost.company_name}
-                  postedDate={jobPost.job_created_at}
-                />
-              ))}
-            </div>
+            <div style={{ padding: "10px" }}>{renderJobListings}</div>
           )}
         </div>
       </div>
