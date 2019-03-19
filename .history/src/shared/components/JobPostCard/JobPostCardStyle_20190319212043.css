@@ -1,0 +1,8 @@
+.jobcardWrapper {
+  border-bottom: 0.1rem solid #f7f7f7;
+  padding: 1rem;
+}
+
+.titleRow {
+  display: flex;
+}

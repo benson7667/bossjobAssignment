@@ -1,0 +1,19 @@
+.jobcardWrapper {
+  border-bottom: 0.1rem solid #f7f7f7;
+  padding: 1rem;
+}
+
+.titleRow {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.titleRow #jobTitle {
+  flex: 1;
+  font-weight: "100";
+  font-size: 15px;
+}
+
+.titleRow #jobSalary {
+  font-size: 15px;
+}
