@@ -3,6 +3,7 @@ import "./App.css";
 
 import Header from "./shared/components/Header";
 import Button from "./shared/components/Button";
+import JobPostCard from "./shared/components/JobPostCard";
 
 class App extends Component {
   render() {

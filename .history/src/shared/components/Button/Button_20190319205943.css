@@ -1,0 +1,14 @@
+.btn {
+  border: 0.5rem solid #397ae3;
+  color: "black";
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-round {
+  border-radius: 1.5rem;
+}
