@@ -50,11 +50,6 @@ const styles = {
     display: "flex",
     alignItems: "center",
     flex: 1
-  },
-  bottomRow: {
-    display: "flex",
-    alignItems: "center",
-    marginTop: "15px"
   }
 };
 
@@ -105,7 +100,13 @@ const JobPostCard = ({
         </span>
       </div>
 
-      <div style={styles.bottomRow}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          marginTop: "15px"
+        }}
+      >
         <div style={styles.employerImgTitleWrapper}>
           <img
             style={styles.employerImgWrapper}

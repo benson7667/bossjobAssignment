@@ -18,9 +18,9 @@ class App extends Component {
               jobLocation="Cebu City"
               jobMinEducation="Diploma"
               jobType="Full Time"
-              jobEmployerImg="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              jobEmployerTitle="ABC Private Limited"
             />
+            <JobPostCard />
+            <JobPostCard />
           </div>
         </div>
       </div>

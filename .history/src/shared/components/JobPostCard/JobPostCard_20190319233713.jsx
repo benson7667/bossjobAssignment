@@ -40,21 +40,6 @@ const styles = {
   icon: {
     marginRight: "5px",
     color: Color.primaryBlue
-  },
-  employerImgWrapper: {
-    width: "40px",
-    height: "40px",
-    marginRight: "10px"
-  },
-  employerImgTitleWrapper: {
-    display: "flex",
-    alignItems: "center",
-    flex: 1
-  },
-  bottomRow: {
-    display: "flex",
-    alignItems: "center",
-    marginTop: "15px"
   }
 };
 
@@ -64,9 +49,7 @@ const JobPostCard = ({
   jobLocation,
   jobMinExp,
   jobMinEducation,
-  jobType,
-  jobEmployerImg,
-  jobEmployerTitle
+  jobType
 }) => (
   <div
     style={{
@@ -77,42 +60,56 @@ const JobPostCard = ({
   >
     <div className="jobcardWrapper">
       <div style={styles.rowInfo}>
-        <span style={styles.jobTitle}>{jobTitle}</span>
-        <span style={styles.jobSalary}>{jobSalary}</span>
+        <span style={styles.jobTitle}>
+          Customer Service Representative and aggrgation the rest blah blah blah
+        </span>
+        <span style={styles.jobSalary}>P15K - P20K</span>
       </div>
 
       <div style={styles.rowInfo}>
         <span style={styles.miniInfoText}>
           <i style={styles.icon} className="fa fa-map" />
-          {jobLocation}
+          Cebu City
         </span>
 
         <span style={styles.miniInfoText}>
-          <i style={styles.icon} className="fa fa-briefcase" />
-          {jobMinExp}
+          <i style={styles.icon} className="fa fa-briefcase" />1 - 3 years
         </span>
       </div>
 
       <div style={styles.rowInfo}>
         <span style={styles.miniInfoText}>
           <i style={styles.icon} className="fa fa-graduation-cap" />
-          {jobMinEducation}
+          Diploma
         </span>
 
         <span style={styles.miniInfoText}>
           <i style={styles.icon} className="fa fa-clock" />
-          {jobType}
+          Full Time
         </span>
       </div>
 
-      <div style={styles.bottomRow}>
-        <div style={styles.employerImgTitleWrapper}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center"
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flex: 1
+          }}
+        >
           <img
-            style={styles.employerImgWrapper}
-            src={jobEmployerImg}
+            style={{ width: "40px", height: "40px", marginRight: "10px" }}
+            src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             alt="employer profile"
           />
-          <p style={styles.employerTitle}>{jobEmployerTitle}</p>
+          <p style={styles.employerTitle}>
+            Shop All You Can Inc asdasdasd asdasdas
+          </p>
         </div>
 
         <span style={styles.postedAgo}>3 hours ago</span>
