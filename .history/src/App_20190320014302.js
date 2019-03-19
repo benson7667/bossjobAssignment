@@ -39,7 +39,7 @@ class App extends Component {
         <div className="App-Wrapper">
           <Header />
           {isLoading || jobListings === null ? (
-            <JobListingLoader />
+            <MyListLoader />
           ) : (
             <div style={{ padding: "10px" }}>
               {jobListings.map(jobPost => (

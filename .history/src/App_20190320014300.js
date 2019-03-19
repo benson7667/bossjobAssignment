@@ -5,7 +5,7 @@ import { List } from "react-content-loader";
 import Header from "./shared/components/Header";
 import JobPostCard from "./shared/components/JobPostCard";
 import { loadJobListings } from "./action/jobListingAction";
-import { JobListingLoader } from "./shared/components/loader";
+import JobListingLoader from "./shared/components/loader";
 
 class App extends Component {
   constructor(props) {
@@ -39,7 +39,7 @@ class App extends Component {
         <div className="App-Wrapper">
           <Header />
           {isLoading || jobListings === null ? (
-            <JobListingLoader />
+            <MyListLoader />
           ) : (
             <div style={{ padding: "10px" }}>
               {jobListings.map(jobPost => (

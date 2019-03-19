@@ -1,13 +1,11 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
-import randomstring from "randomstring";
 
 const JobListingLoader = props => {
   return Array(3)
     .fill("")
-    .map(() => (
+    .map(item => (
       <ContentLoader
-        key={randomstring.generate(7)}
         height={200}
         width={395}
         speed={2}
