@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import { connect } from "react-redux";
+import { connect } from "redux";
 import Header from "./shared/components/Header";
 import JobPostCard from "./shared/components/JobPostCard";
 import { loadJobListings } from "./action/jobListingAction";
 
 class App extends Component {
-  componentDidMount() {
-    this.props._loadJobListings();
-  }
+  componentDidMount() {}
 
   render() {
     return (
@@ -33,9 +31,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  jobListings: state.jobListings
-});
+const mapStateToProps = state => ({});
 
 const mapDispatchToProps = {
   _loadJobListings: loadJobListings

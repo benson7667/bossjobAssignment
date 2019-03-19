@@ -6,9 +6,7 @@ import JobPostCard from "./shared/components/JobPostCard";
 import { loadJobListings } from "./action/jobListingAction";
 
 class App extends Component {
-  componentDidMount() {
-    this.props._loadJobListings();
-  }
+  componentDidMount() {}
 
   render() {
     return (

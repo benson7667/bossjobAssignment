@@ -7,7 +7,7 @@ import { loadJobListings } from "./action/jobListingAction";
 
 class App extends Component {
   componentDidMount() {
-    this.props._loadJobListings();
+    this.props.loadJobListings();
   }
 
   render() {
