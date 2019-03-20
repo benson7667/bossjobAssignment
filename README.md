@@ -1,6 +1,6 @@
 # Bossjob Frontend Test
 
-## Run in locahost
+## Run in localhost
 ```
 npm install && npm start
 ```
