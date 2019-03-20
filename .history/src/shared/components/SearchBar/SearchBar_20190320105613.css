@@ -1,0 +1,12 @@
+form #searchInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0 20px;
+  box-sizing: border-box;
+}
+
+#searchInput::placeholder {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+}

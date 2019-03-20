@@ -1,0 +1,24 @@
+.btn {
+  border: 2px solid;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-round {
+  border-radius: 1.5rem;
+}
+
+.primary {
+  border-color: #397ae3;
+  color: #397ae3;
+}
+
+.primary:hover {
+  background: #397ae3;
+  color: white;
+}

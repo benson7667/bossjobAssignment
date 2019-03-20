@@ -1,0 +1,10 @@
+.inputContainer {
+  display: -ms-flexbox; /* IE10 */
+  display: "flex";
+}
+
+#searchInput::placeholder {
+  color: #979797;
+  font-weight: bold;
+  font-size: 14px;
+}

@@ -1,0 +1,21 @@
+.inputContainer {
+  display: -ms-flexbox; /* IE10 */
+  display: "flex";
+}
+
+.inputContainer #searchInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0 20px;
+  box-sizing: border-box;
+  outline: none;
+  border-width: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#searchInput::placeholder {
+  color: #979797;
+  font-weight: bold;
+  font-size: 14px;
+}

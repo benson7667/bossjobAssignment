@@ -1,0 +1,36 @@
+.inputContainer {
+  display: -ms-flexbox; /* IE10 */
+  display: "flex";
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* .inputContainer #searchInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0 20px;
+  box-sizing: border-box;
+  outline: none;
+  border-width: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#searchInput::placeholder {
+  color: #979797;
+  font-weight: bold;
+  font-size: 14px;
+} */
