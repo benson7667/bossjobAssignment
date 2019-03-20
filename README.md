@@ -1,5 +1,10 @@
 # Bossjob Frontend Test
 
+## Run in locahost
+```
+npm install && npm start
+```
+
 ## Instruction
 Please implement the job list page as per design (job-list-design.jpg). 
 Please use this git repository as a starter kit. This has been created using CRA.
