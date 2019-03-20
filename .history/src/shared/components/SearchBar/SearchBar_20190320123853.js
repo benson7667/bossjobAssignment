@@ -29,7 +29,7 @@ class SearchBar extends Component {
       this.props._searchJobByKeyWords(this.state.searchText);
     else this.props._loadJobListings();
 
-    this.setState({ searchText: "" });
+    this.setState({ searchText: "'" });
   };
 
   render() {

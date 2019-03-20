@@ -7,7 +7,6 @@
   font-weight: bold;
   width: 100%;
   cursor: pointer;
-  background-color: transparent;
 }
 
 .btn-round {
@@ -17,6 +16,7 @@
 .primary {
   border-color: #397ae3;
   color: #397ae3;
+  background: "transparent";
 }
 
 .primary:hover {
